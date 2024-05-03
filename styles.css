@@ -1,0 +1,275 @@
+html, body {
+    box-sizing: border-box;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto 1fr;
+    height: 100%;
+}
+
+#sidebar {
+    background-color: dodgerblue;
+    grid-row: 1 / -1;
+    padding: 24px;
+    padding-right: 48px;
+    color: white;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+}
+
+#header {
+    grid-column: 2/-1;
+    grid-row: 1;
+    z-index: 2;
+    background-color: white;
+    display: flex;
+    padding: 24px;
+    align-items: center;
+    padding-bottom: 0px;
+}
+
+#menu {
+    grid-column: 2/-1;
+    grid-row: 2;
+    box-shadow: 0px 5px 10px silver;
+    z-index: 1;
+}
+
+#content {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr 20rem;
+    grid-template-rows: auto 1fr;
+    gap: 16px;
+    background-color: #e2e8f0;
+}
+
+#projects {
+    grid-column: 1;
+    grid-row: 1/-1;
+}
+
+#projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0px;
+}
+
+.project {
+    background-color: white;
+    padding: 24px;
+    border-radius: 5px;
+    border-left: 5px solid #fbbf24;
+}
+
+.name {
+    font-weight: bold;
+}
+
+p {
+    margin: 0px;
+    color: #4b5563;
+}
+
+.project-actions {
+    display: flex;
+    justify-content: end;
+    margin-top: 16px;
+}
+
+.project-actions button {
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+}
+
+.project-actions button:hover {
+    cursor: pointer;
+    background-color: white;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+}
+
+.page:hover {
+    cursor: pointer;
+}
+
+.page > * {
+    margin: 0px 8px;
+}
+
+#nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+}
+
+.icon:hover {
+    cursor: pointer;
+}
+
+#nav li {
+    list-style-type: none;
+    margin-top: 8px;
+    margin-bottom: 16px;;
+}
+
+#nav ul {
+    padding-left: 34px;
+    margin-top: 48px;
+}
+
+#search {
+    display: flex;
+    flex-grow: 1;
+    margin-right: 96px;
+}
+
+#search input {
+    flex-grow: 1;
+    border: none;
+    background-color: #e2e8f0;
+    border-radius: 12px;
+    height: 24px;
+    padding-left: 12px;
+}
+
+#header .avatar > img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+#menu {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.greeting {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: min-content min-content;
+    align-content: center;
+}
+
+.greeting .avatar {
+    width: 64px;
+    grid-column: 1;
+    grid-row: 1/-1;
+    margin-right: 16px;
+}
+
+.greeting .avatar > img {
+    width: 64px;
+    border-radius: 50%;
+}
+
+.greeting span {
+    align-self: end;
+}
+
+.greeting h2 {
+    align-self: start;
+    margin: 0px;
+}
+
+#actions button {
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    padding: 8px 24px;
+    margin-left: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#announcements-container {
+    margin-top: 16px;
+    background-color: white;
+    padding: 24px;
+    border-radius: 5px;
+}
+
+.announcement {
+    padding-bottom: 24px;
+    border-bottom: 2px solid silver;
+    margin-top: 24px;
+}
+
+.announcement:last-of-type {
+    border-bottom: none;
+}
+
+.announcement:first-of-type {
+    margin-top: 8px;
+}
+
+#trending-container {
+    margin-top: 16px;
+    background-color: white;
+    padding: 24px;
+    border-radius: 5px;
+    padding-bottom: 16px;
+}
+
+.trending-account {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 8px;
+}
+
+.trending-account .avatar {
+    grid-row: 1 / -1;
+    margin-right: 16px;
+}
+
+.trending-account img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.trending-account span:first-of-type {
+    align-self: end;
+}
+
+.trending-account span:last-of-type {
+    align-self: start;
+}
